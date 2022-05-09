@@ -1,0 +1,35 @@
+<div align="center">
+<fieldset>
+<h1>All Users</h1>
+<table border=2px>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Contact</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th callspan="2">Action</th>
+	</tr>
+
+{%for tup in elist%}
+	<tr>
+
+	<td>{{tup[0]}}</td>
+	<td>{{tup[1]}}</td>
+	<td>{{tup[2]}}</td>
+	<td>{{tup[3]}}</td>
+	<td>{{tup[4]}}</td>
+	<td>
+	<a href="editEmp?id={{tup[0]}}">Edit</a>
+	<a href="deleteEmp?id={{tup[0]}}">Delete</a>		
+	</td>
+
+	</tr>
+{%endfor%}
+</table>
+<h2><a href="home">Home</a></h2>
+<h2><a href="reg">Registration Form</a></h2>
+</fieldset>
+</div>
+
+
